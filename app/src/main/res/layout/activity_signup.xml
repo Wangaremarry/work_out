@@ -5,6 +5,8 @@
     android:id="@+id/etfrstname"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00BCD4"
+    android:backgroundTint="#4B1EE2E9"
     tools:context=".SignupActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -177,8 +179,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toBottomOf="@+id/tilpassword"
-        app:passwordToggleEnabled="true"
-        >
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etconfirmpassword"

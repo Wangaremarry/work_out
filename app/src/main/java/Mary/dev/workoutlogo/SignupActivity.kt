@@ -3,6 +3,9 @@ package Mary.dev.workoutlogo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract.DisplayNameSources.EMAIL
+import android.provider.ContactsContract.Intents.Insert.EMAIL
+import android.util.Patterns
 import android.widget.Button
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputEditText
@@ -69,6 +72,19 @@ class SignupActivity : AppCompatActivity() {
         if (confirmpassword.isBlank()){
             tilconfirmpassword.error="Confirm password is required"
         }
+        if(confirmpassword!=password){
+            tilconfirmpassword.error="Password does not match"
+        }
+        if (Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            tilemailaddress.error="Email is invalid"
+        }
+//        if(password==confirmpassword) {
+//            tilconfirmpassword.error ="Confirm password"
+//        }
+//        else {
+//
+//        tilconfirmpassword.error="invalid password"
+//        }
     }
 
 }

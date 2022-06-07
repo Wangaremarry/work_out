@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E1DBDB"
-    android:backgroundTint="#EAEDEF"
+    android:backgroundTint="#4B1EE2E9"
     tools:context=".LoginActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -17,8 +17,8 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilemail"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         app:boxBackgroundColor="@android:color/transparent"
