@@ -36,19 +36,22 @@ class SignupActivity : AppCompatActivity() {
         tillastname=findViewById(R.id.tillastname)
         etemailaddress= findViewById(R.id.etemailaddress)
         etpassword = findViewById(R.id.etpassword)
+        etconfirmpassword= findViewById(R.id.etconfirmpassword)
         btnsignup = findViewById(R.id.btnsignup)
         tilemailaddress = findViewById(R.id.tilemailaddress)
         tilpassword = findViewById(R.id.tilpassword)
+        tilconfirmpassword= findViewById(R.id.tilconfirmpassword)
 
         tvlogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
         btnsignup.setOnClickListener {
-            val intent = Intent(this, SignupActivity::class.java)
-            startActivity(intent)
             validateSignup()
+            val intent=Intent(this,Homeactivity::class.java)
+            startActivity(intent)
         }
+
     }
     fun  validateSignup() {
         var firstname=etfirstname.text.toString()

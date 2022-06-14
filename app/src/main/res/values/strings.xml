@@ -11,4 +11,7 @@
     <string name="have_an_account_login">Have an account? LogIn</string>
     <string name="first_name">First Name</string>
     <string name="phone">Phone</string>
+    <string name="plan">Plan</string>
+    <string name="track">Track</string>
+    <string name="profile">Profile</string>
 </resources>

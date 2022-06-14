@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import java.lang.NullPointerException
 import java.util.logging.LogManager
 
 class LoginActivity : AppCompatActivity() {
@@ -41,6 +42,9 @@ class LoginActivity : AppCompatActivity() {
         }
     }
         fun  validateLogin() {
+            var error=false
+            tilemail.error=null
+            tilpassword.error=null
             var email = etemail.text.toString()
             var password = etpassword.text.toString()
             if (email.isBlank()){
@@ -49,6 +53,9 @@ class LoginActivity : AppCompatActivity() {
         if (password.isBlank()){
         tilpassword.error = "Password is required"
     }
+            if(!error){
+                
+            }
     }
 }
 
