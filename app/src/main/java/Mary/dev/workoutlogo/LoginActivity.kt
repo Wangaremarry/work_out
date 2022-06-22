@@ -1,5 +1,6 @@
 package Mary.dev.workoutlogo
 
+import Mary.dev.workoutlogo.databinding.ActivityLoginBinding
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,31 +12,37 @@ import java.lang.NullPointerException
 import java.util.logging.LogManager
 
 class LoginActivity : AppCompatActivity() {
-    lateinit var tvsignup: TextView
-    lateinit var etemail: TextInputEditText
-    lateinit var etpassword: TextInputEditText
-    lateinit var tilemail: TextInputLayout
-    lateinit var tilpassword: TextInputLayout
-    lateinit var btnlogin: Button
+    lateinit var binding:ActivityLoginBinding
+//    lateinit var tvsignup: TextView
+//    lateinit var etemail: TextInputEditText
+//    lateinit var etpassword: TextInputEditText
+//    lateinit var tilemail: TextInputLayout
+//    lateinit var tilpassword: TextInputLayout
+//    lateinit var btnlogin: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val intent=Intent(this,LoginActivity::class.java)
+//        val intent = Intent(this, LoginActivity::class.java)
         setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        tvsignup = findViewById(R.id.tvsignup)
-        etemail = findViewById(R.id.etemail)
-        etpassword = findViewById(R.id.etpassword)
-        btnlogin = findViewById(R.id.btnlogin)
-        tilemail = findViewById(R.id.tilemail)
-        tilpassword = findViewById(R.id.tilpassword)
 
-        tvsignup.setOnClickListener {
+//        tvsignup = findViewById(R.id.tvsignup)
+//        etemail = findViewById(R.id.etemail)
+//        etpassword = findViewById(R.id.etpassword)
+//        btnlogin = findViewById(R.id.btnlogin)
+//        tilemail = findViewById(R.id.tilemail)
+//        tilpassword = findViewById(R.id.tilpassword)
+castView()
+    }
+    fun castView(){
+        binding.tvsignup.setOnClickListener {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
-        btnlogin.setOnClickListener {
+        binding.btnlogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             validateLogin()
@@ -43,21 +50,26 @@ class LoginActivity : AppCompatActivity() {
     }
         fun  validateLogin() {
             var error=false
-            tilemail.error=null
-            tilpassword.error=null
-            var email = etemail.text.toString()
-            var password = etpassword.text.toString()
+            binding.tilemail.error=null
+            binding.tilpassword.error=null
+            var email = binding.etemail.text.toString()
+            var password = binding.etpassword.text.toString()
             if (email.isBlank()){
-                tilemail.error = "Email is required"
+                binding.tilemail.error = "Email is required"
+                error=true
         }
         if (password.isBlank()){
-        tilpassword.error = "Password is required"
+        binding.tilpassword.error = "Password is required"
+            error=true
     }
             if(!error){
-                
+         startActivity(Intent(this,Homeactivity::class.java))
+            }
             }
     }
-}
+
+
+
 
 
 
