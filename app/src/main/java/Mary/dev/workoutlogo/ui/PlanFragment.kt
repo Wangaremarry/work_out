@@ -1,5 +1,6 @@
-package Mary.dev.workoutlogo
+package Mary.dev.workoutlogo.ui
 
+import Mary.dev.workoutlogo.R
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater

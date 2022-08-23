@@ -1,5 +1,6 @@
-package Mary.dev.workoutlogo
+package Mary.dev.workoutlogo.ui
 
+import Mary.dev.workoutlogo.R
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 
 
-class Track_Fragment : Fragment() {
 
+class Profile_Fragment : Fragment() {
 
 
     override fun onCreateView(
@@ -16,8 +17,7 @@ class Track_Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_track_, container, false)
+        return inflater.inflate(R.layout.fragment_profile_, container, false)
     }
 
-
-    }
+}
